@@ -66,15 +66,19 @@
 @media (min-width: 0px) and (max-width: 920px) {
   .header__menu {
     position: absolute;
-    top: 0;
+    top: -360px;
     left: 0;
     width: 100%;
-    background-color: red;
+    background-color: whitesmoke;
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-top: 24px;
+    transition: 1s ease;
   }
-
+  .header__menu--active{
+    top: 0;
+  }
   .header__nav {
     margin: 0;
     width: 100%;
@@ -89,19 +93,20 @@
   }
   .header__btn {
     display: block;
+    z-index: 1;
   }
   .header__wrapper{
     justify-content: space-between;
   }
   .header__nav-item{
     width: 200px;
-    height: 35px;
+    height: 40px;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #0001;
     &:first-child{
-      border-top: 1px solid #f2f2f2;
+      border-top: 1px solid #0001;
     }
   }
   .header__nav-link{

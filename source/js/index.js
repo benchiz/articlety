@@ -34,3 +34,16 @@ registrationToAuthorization.addEventListener('click', function (e) {
 	registrationModal.classList.remove('registration--active');
 	authorizationModal.classList.add('authorization--active');
 });
+
+const openMenu = document.querySelector('.header__btn');
+const menu = document.querySelector('.header__menu');
+
+openMenu.addEventListener('click', function () {
+	if (openMenu.getAttribute('data-closed') === '1') {
+		menu.classList.add('header__menu--active');
+		openMenu.setAttribute('data-closed', 0);
+	} else {
+		menu.classList.remove('header__menu--active');
+		openMenu.setAttribute('data-closed', 1);
+	}
+});
